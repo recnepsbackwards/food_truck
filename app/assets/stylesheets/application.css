@@ -1,0 +1,139 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+
+ *= require rails_bootstrap_forms
+ *= require_tree .
+ *= require_self
+ */
+/*
+ @media only screen and (min-width: 1200px) {
+     .collapse {
+         display: block;
+     }
+     .navbar-toggle {
+         display: none;
+     }
+ }*/
+
+ @media (max-width: 950px) {
+   .navbar-header {
+       float: none;
+   }
+   .navbar-left,.navbar-right {
+       float: none !important;
+   }
+   .navbar-toggle {
+       display: block;
+   }
+   .navbar-collapse {
+       border-top: 1px solid transparent;
+       box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+   }
+   .navbar-fixed-top {
+       top: 0;
+       border-width: 0 0 1px;
+   }
+   .navbar-collapse.collapse {
+       display: none!important;
+   }
+   .navbar-nav {
+       float: none!important;
+       margin-top: 7.5px;
+   }
+   .navbar-nav>li {
+       float: none;
+   }
+   .navbar-nav>li>a {
+       padding-top: 10px;
+       padding-bottom: 10px;
+   }
+   .collapse.in{
+       display:block !important;
+   }
+ }
+
+body {
+  background-color: #FCF6CF;
+}
+
+#map-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+
+#map {
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+}
+
+#sign-up-container {
+  text-align: center;
+  margin-top: 80px;
+  padding-bottom: 30px;
+}
+
+#facebook-container {
+  text-align: center;
+  margin-top: 80px;
+  padding-bottom: 30px;
+}
+
+#log-in-container {
+  text-align: center;
+  margin-top: 80px;
+  padding-bottom: 30px;
+  border-left-color: grey;
+  border-left-size: 1px;
+  border-left-style: solid;
+}
+
+#search-select {
+  width: 100%;
+  height: 33px;
+}
+
+#search-field {
+  width: 100%;
+  height: 50px;
+}
+
+table {
+  width: auto;
+  margin: auto;
+  overflow-x: auto;
+}
+
+#profile-link {
+  float: right;
+}
+
+.form-field {
+  width: 75%;
+}
+
+.form-contents {
+  text-align: left;
+  padding-left: 20px;
+
+}
+
+.field {
+  margin: 15px;
+}
+#pw-email-field {
+  width: 50%;
+  justify-content: center;
+}

@@ -1,0 +1,40 @@
+
+#map {
+  height: 500px;
+  width: 800px;
+}
+
+ul.hmenu {
+  list-style: none;
+  margin: 0 0 2em;
+  padding: 0;
+}
+
+ul.hmenu li {
+  display: inline;
+}
+
+.jumbotron > p {
+  font-family: 'Hind', sans-serif;
+  line-height: 115%;
+}
+.jumbotron {
+  font-family: 'Hind', sans-serif;
+   background:transparent;
+}
+#trucks-link {
+  font-size: 18px;
+}
+.infowindow_link {
+  font-size: 12px;
+}
+.infowindow_truck_name {
+  font-size: 20px;
+}
+
+body.landing_page {
+  background-image: url(foodtruck4.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}

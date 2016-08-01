@@ -1,0 +1,21 @@
+== FOOD TRUCK TRACKER
+
+Purpose:
+We connect people with food trucks by making the whereabouts (time & place) of food trucks readily available.
+
+Roles:
+* Foodie: Anonymous user interested in great food truck food.
+* Contributor: Can submit reviews/recommendations on food trucks. Logs in through Facebook.
+* Food truck owner: Can update location, time, menu, and type of cuisine.
+
+Technolgies Used:
+* Ruby on Rails
+* PostgresQl
+* Ruby
+* HTML
+* CSS
+* Javascript
+* jQuery
+* Google Maps API
+
+This was a two week project at Learn Academy in San Diego. Made with love by the Fun Factor 50 team. Let us know what you think!

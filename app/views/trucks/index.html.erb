@@ -1,0 +1,77 @@
+<div class="page-header">
+  <h1>Food Trucks Out Now</h1>
+</div>
+
+<table class='table table-responsive'>
+  <thead>
+    <tr>
+      <th></th>
+      <th>Name</th>
+      <th>Cuisine</th>
+      <th>Menu</th>
+      <th>Rating</th>
+      <th>Start time</th>
+      <th>End time</th>
+      <th>Street address</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Zip code</th>
+    </tr>
+  </thead>
+
+  <tbody>
+
+    <% if !(@time_and_places.length == 0) %>
+      <% @time_and_places.each do |time_and_place| %>
+        <tr>
+          <td><%= link_to image_tag(time_and_place.truck.image.url(:small)), time_and_place.truck %></td>
+          <td><%= link_to time_and_place.truck.name, time_and_place.truck %></td>
+          <td><%= time_and_place.truck.cuisine %></td>
+          <td><%= time_and_place.truck.menu %></td>
+
+          <td span="1" style="width: 15%"><% @reviews = Review.where(truck_id: time_and_place.truck.id) %>
+            <% if @reviews.blank? %>
+              <% @avg_review = 0 %>
+            <% else %>
+              <% @avg_review = @reviews.average(:rating).round(2) %>
+            <% end %>
+            <div class="star-rating" data-score= <%= @avg_review %> ></div>
+          </td>
+
+          <td><%= time_and_place.start_time %></td>
+          <td><%= time_and_place.end_time %></td>
+          <td><%= time_and_place.street_address %></td>
+          <td><%= time_and_place.city %></td>
+          <td><%= time_and_place.state %></td>
+          <td><%= time_and_place.zip_code %></td>
+        </tr>
+      <% end %>
+    <% else %>
+      <tr>
+        <td colspan="10">
+          <em>Currently there are no food trucks out. Try again later.</em>
+        </td>
+      </tr>
+    <% end %>
+
+  </tbody>
+</table>
+
+<br>
+
+<script>
+    $('.star-rating').raty({
+      path: '/assets/',
+      readOnly: true,
+      score: function() {
+            return $(this).attr('data-score');
+    }
+  });
+</script>
+
+<script>
+  $('#star-rating').raty({
+    path: '/assets/',
+    scoreName: 'review[rating]'
+  });
+</script>
